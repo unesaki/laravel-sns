@@ -8,6 +8,12 @@ use \App\Models\Tweet;
 
 class TimelineController extends Controller
 {
+
+    public function index()
+    {
+        return view('/index');
+    }
+
     public function showTimelinePage()
     {
         $tweets = Tweet::latest()->get();
